@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/grapozo/DataIntegrationTool/issues"
   },
-  "homepage": "https://github.com/grapozo/DataIntegrationTool#readme"
+  "homepage": "https://github.com/grapozo/DataIntegrationTool#readme",
+  "dependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  }
 }
