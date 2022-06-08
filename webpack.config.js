@@ -13,6 +13,10 @@ module.exports = {
 				include: path.join(__dirname, 'src'),
 				use: 'babel-loader',
 			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
+			},
 		],
 	},
 	plugins: [
