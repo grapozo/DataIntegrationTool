@@ -1,35 +1,37 @@
 {
-    "name": "data_integration_tool",
-    "version": "1.0.0",
-    "description": "A data integration tool for synchronizing email contacts.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/grapozo/DataIntegrationTool.git"
-    },
-    "author": "Gabriel Rapozo",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/grapozo/DataIntegrationTool/issues"
-    },
-    "homepage": "https://github.com/grapozo/DataIntegrationTool#readme",
-    "dependencies": {
-        "react": "18.1.0",
-        "react-dom": "18.1.0"
-    },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "5.27.1",
-        "@typescript-eslint/parser": "5.27.1",
-        "eslint": "8.17.0",
-        "eslint-plugin-prettier": "4.0.0",
-        "eslint-plugin-react": "7.30.0",
-        "prettier": "2.6.2",
-        "typescript": "4.7.3",
-        "webpack": "5.73.0",
-        "webpack-cli": "4.9.2",
-        "webpack-dev-server": "4.9.2"
-    }
+	"name": "data_integration_tool",
+	"version": "1.0.0",
+	"description": "A data integration tool for synchronizing email contacts.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prettier:write": "prettier --write .",
+		"prettier:check": "prettier --check ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/grapozo/DataIntegrationTool.git"
+	},
+	"author": "Gabriel Rapozo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/grapozo/DataIntegrationTool/issues"
+	},
+	"homepage": "https://github.com/grapozo/DataIntegrationTool#readme",
+	"dependencies": {
+		"react": "18.1.0",
+		"react-dom": "18.1.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "5.27.1",
+		"@typescript-eslint/parser": "5.27.1",
+		"eslint": "8.17.0",
+		"eslint-plugin-prettier": "4.0.0",
+		"eslint-plugin-react": "7.30.0",
+		"prettier": "2.6.2",
+		"typescript": "4.7.3",
+		"webpack": "5.73.0",
+		"webpack-cli": "4.9.2",
+		"webpack-dev-server": "4.9.2"
+	}
 }
