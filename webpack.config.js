@@ -8,11 +8,19 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			/**
+			 * Handles tsx files using babel loader.
+			 */
 			{
 				test: /\.tsx?$/,
 				include: path.join(__dirname, 'src'),
 				use: 'babel-loader',
 			},
+			/**
+			 * Handles scss files using sass-loader,
+			 * allows css-loader to modularize it and
+			 * then injects it into the DOM with style-loader.
+			 */
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
@@ -29,6 +37,9 @@ module.exports = {
 					},
 				],
 			},
+			/**
+			 * Handles .svg files as React Components.
+			 */
 			{
 				test: /\.svg$/,
 				use: ['@svgr/webpack'],
@@ -36,7 +47,9 @@ module.exports = {
 		],
 	},
 	plugins: [
-		// Handles HTML files and injects the bundles.
+		/**
+		 * Handles HTML files and injects the script bundles.
+		 */
 		new HtmlWebpackPlugin({
 			filename: './index.html',
 			template: './public/index.html',
