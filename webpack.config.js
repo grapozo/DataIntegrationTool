@@ -12,7 +12,7 @@ module.exports = {
        * Handles tsx files using babel loader.
        */
       {
-        test: /\.tsx?$/,
+        test: /\.ts[x]?$/,
         include: path.join(__dirname, 'src'),
         use: 'babel-loader'
       },
@@ -54,5 +54,8 @@ module.exports = {
       filename: './index.html',
       template: './public/index.html'
     })
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx']
+  }
 };
