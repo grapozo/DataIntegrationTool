@@ -12,6 +12,9 @@ type ContactsDropdownListProps = {
   selectedContactListChangedCallback: (selectedContacts: Contact[]) => void;
 };
 
+/**
+ * Iterates and binds a contact list to a list of checkboxes.
+ */
 export const ContactsDropdownList = ({
   isVisible,
   contacts,
