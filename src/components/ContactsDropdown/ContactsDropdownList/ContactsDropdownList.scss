@@ -3,6 +3,7 @@
 @use '../configuration/DropdownConfigurations' as *;
 
 .contactsDropdownList {
+  text-align: left;
   overflow-y: scroll;
   // The max height uses the figma design as a base.
   max-height: 5rem;
