@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactsDropdownPlaceholder should correctly render 1`] = `
+<div
+  className="
+        undefined 
+        undefined
+      "
+  onClick={[MockFunction]}
+>
+  <span
+    className="undefined"
+  >
+    No Contacts
+  </span>
+</div>
+`;

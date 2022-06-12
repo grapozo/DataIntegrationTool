@@ -1,0 +1,34 @@
+.syncContactsButton {
+  position: relative;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22524%22%20height%3D%22541%22%20viewBox%3D%220%200%20524%20541%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M184.292%201C21.644%201%20-1.85578%20167.672%200.827272%20251.008L12.7622%20381.568C7.21108%20400.551%207.7662%20437.515%2044.4037%20436.848C90.2006%20436.015%20111.295%20442.682%20126.838%20494.628C137.94%20527.962%20189.011%20538.24%20206.774%20531.018C222.595%20524.586%20221.874%20524.74%20258.955%20535.185C305.307%20548.241%20313.634%20532.963%20324.736%20510.74C335.838%20488.517%20347.773%20494.35%20417.44%20470.46C426.475%20467.122%20432.59%20461.72%20442.143%20452.404C451.063%20443.705%20471.009%20434.07%20477.67%20415.459C509.597%20362.136%20522.634%20286.434%20522.634%20247.119C522.634%20115.726%20389.819%2070.4644%20358.876%2060.7243C324.459%2049.8905%20268.115%201%20184.292%201Z%22%20fill%3D%22%23E5F5F8%22%20stroke%3D%22%23E5F5F8%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-repeat: no-repeat;
+  height: 34rem;
+  width: 33rem;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  svg {
+    transition: all 0.3s;
+  }
+  .isSync {
+    transform: rotate(-180deg);
+  }
+
+  .content {
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  @media (max-width: 970px) {
+    // Sets the same color as the blob background.
+    background: #e5f5f8;
+    // Sets a specific small height
+    height: 12rem;
+    // For very small screens, don't set the width
+    // to avoid scroll bugs.
+    width: auto;
+  }
+}
