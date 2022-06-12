@@ -1,0 +1,37 @@
+// NOTE: For convenience, we import the dropdown configuration variables here.
+// If this component is moved in the future, we'll need to redeclare these values.
+@use '../configuration/DropdownConfigurations' as *;
+
+.contactsDropdownList {
+  overflow-y: scroll;
+  // The max height uses the figma design as a base.
+  max-height: 5rem;
+  opacity: 0;
+  visibility: hidden;
+  // Animation for hiding/showing the component
+  transition: visibility $animation-speed linear, opacity $animation-speed linear;
+
+  // Needed to keep the figma-design place of the scrollbar.
+  margin-right: 0.3125rem;
+
+  &.isVisible {
+    // Shows the component
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Chrome scrollbar
+  &::-webkit-scrollbar {
+    width: 0.1875rem;
+    margin-right: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cbd6e2;
+    border-radius: 50px;
+  }
+
+  // Firefox scrollbar
+  scrollbar-color: #cbd6e2 #f5f8fa;
+  scrollbar-width: thin;
+}

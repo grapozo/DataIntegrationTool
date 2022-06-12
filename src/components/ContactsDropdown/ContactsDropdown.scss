@@ -1,0 +1,25 @@
+@use './configuration/DropdownConfigurations' as *;
+.contactsDropdown {
+  position: relative;
+  background-color: #f5f8fa;
+  border: 1px solid #cbd6e2;
+  border-radius: 0.125rem;
+  height: $initial-dropdown-height;
+  width: 216px;
+  font-size: 1rem;
+  user-select: none;
+  transition: all $animation-speed;
+  // Disables highlight when clicking the element (Chrome).
+  -webkit-tap-highlight-color: transparent;
+
+  .contactList {
+    opacity: 0;
+    visibility: hidden;
+    // Animation for hiding/showing the component
+    transition: visibility $animation-speed linear, opacity $animation-speed linear;
+  }
+
+  &.expanded {
+    height: $expanded-dropdown-height;
+  }
+}

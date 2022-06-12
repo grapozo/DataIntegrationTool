@@ -1,0 +1,15 @@
+.contactDropdownListItem {
+  padding: 0 1.25rem 0 1.25rem;
+  color: #33475b;
+  input[type='checkbox'] {
+    // We use hsl to achieve the background color effect.
+    accent-color: hsl(210, 28%, 59%);
+    margin: 0;
+    // Aligns with the placeholder.
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+    // Figma sizes
+    height: 14px;
+    width: 14px;
+  }
+}
