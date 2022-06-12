@@ -13,6 +13,7 @@ type ContactsDropdownProps = {
 export const ContactsDropdown = ({ contacts }: ContactsDropdownProps): JSX.Element => {
   const [dropdownExpanded, setDropdownExpanded] = useState<boolean>(false);
   const [selectedContacts, setSelectedContacts] = useState<Contact[]>([]);
+  // Since we start with no selected contacts, we default the label to 'No Contacts'.
   const [selectedContactsLabel, setSelectedContactsLabel] = useState<string>('No Contacts');
 
   const handleContactListChangedCallback = (selectedContacts: Contact[]) => {
@@ -31,19 +32,17 @@ export const ContactsDropdown = ({ contacts }: ContactsDropdownProps): JSX.Eleme
   }, [selectedContacts]);
 
   return (
-    <>
-      <div className={`${styles.contactsDropdown} ${dropdownExpanded ? styles.expanded : ''}`}>
-        <ContactsDropdownPlaceholder
-          onClick={() => setDropdownExpanded(!dropdownExpanded)}
-          selectedContactsLabel={selectedContactsLabel}
-          isDropdownExpanded={dropdownExpanded}
-        />
-        <ContactsDropdownList
-          isVisible={dropdownExpanded}
-          contacts={contacts}
-          selectedContactListChangedCallback={handleContactListChangedCallback}
-        />
-      </div>
-    </>
+    <div className={`${styles.contactsDropdown} ${dropdownExpanded ? styles.expanded : ''}`}>
+      <ContactsDropdownPlaceholder
+        onClick={() => setDropdownExpanded(!dropdownExpanded)}
+        selectedContactsLabel={selectedContactsLabel}
+        isDropdownExpanded={dropdownExpanded}
+      />
+      <ContactsDropdownList
+        isVisible={dropdownExpanded}
+        contacts={contacts}
+        selectedContactListChangedCallback={handleContactListChangedCallback}
+      />
+    </div>
   );
 };
