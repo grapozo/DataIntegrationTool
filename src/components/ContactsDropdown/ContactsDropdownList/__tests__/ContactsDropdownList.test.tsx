@@ -4,6 +4,7 @@ import { ContactsDropdownList } from '../ContactsDropdownList';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+// Since we have snap testing, we can't generate random values here.
 const mockContactList: Contact[] = [
   {
     id: '9ba3f8f7d420c5fb33d7fbf2704e24fe',
