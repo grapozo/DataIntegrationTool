@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Contact } from 'shared/interfaces/contact.interface';
 import { ContactsDropdownList } from './ContactsDropdownList';
 import { ContactsDropdownPlaceholder } from './ContactsDropdownPlaceholder';
-import { getUpdatedSelectedContactsLabel } from './helpers/ContactsDropdown.helpers';
+import { getUpdatedSelectedContactsLabel } from './helpers';
 
 type ContactsDropdownProps = {
   /** The contacts list */

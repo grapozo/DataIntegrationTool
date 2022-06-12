@@ -1,3 +1,5 @@
+import { Contact } from 'shared/interfaces/contact.interface';
+
 /**
  * Returns a label which depends on the total number of
  * selected contacts
@@ -28,4 +30,22 @@ export const getUpdatedSelectedContactsLabel = (
     return '1 contact';
   }
   return `${numberOfSelectedContacts} contacts`;
+};
+
+/**
+ * Generates a random list of contacts. The contacts id's and name's
+ * will be based on the Math.random function.
+ * This is used for testing purposes only.
+ * @param numberOfContacts number of contacts that will be generated
+ * @returns a list of random contacts
+ */
+export const generateListOfContacts = (numberOfContacts: number): Contact[] => {
+  const contactList: Contact[] = [];
+  for (let index = 0; index < numberOfContacts; index++) {
+    contactList.push({
+      id: Math.random().toString(36).substring(2, 20),
+      name: Math.random().toString(36).substring(2, 20)
+    });
+  }
+  return contactList;
 };
