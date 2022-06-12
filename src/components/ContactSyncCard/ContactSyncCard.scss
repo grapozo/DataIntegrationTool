@@ -1,0 +1,19 @@
+.contactSyncCard {
+  border: 0.125rem solid #dfe3eb;
+  border-radius: 0.125rem;
+  padding: 4rem 2rem 4rem 2rem;
+  text-align: center;
+
+  .serviceName {
+    color: #374a5e;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .serviceDescription {
+    color: #33475b;
+    margin-top: 0.87rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+}

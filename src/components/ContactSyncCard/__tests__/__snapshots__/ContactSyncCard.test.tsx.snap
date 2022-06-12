@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactSyncCard should correctly render 1`] = `
+<div
+  className="undefined"
+>
+  <svg>
+    This is a svg mock
+  </svg>
+  <div
+    className="undefined"
+  >
+    Testing Card
+  </div>
+  <div
+    className="undefined"
+  >
+    Testing the Sync Card!
+  </div>
+  <div
+    className="undefined "
+  >
+    <div
+      className="
+        undefined 
+        
+      "
+      onClick={[Function]}
+    >
+      <span
+        className="undefined"
+      >
+        No Contacts
+      </span>
+    </div>
+    <div
+      className="
+      undefined 
+      "
+    >
+      <div>
+        <div
+          className="undefined"
+        >
+          <label>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            Mocked Contact
+          </label>
+        </div>
+      </div>
+      <div>
+        <div
+          className="undefined"
+        >
+          <label>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            Mocked Contact 2
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
