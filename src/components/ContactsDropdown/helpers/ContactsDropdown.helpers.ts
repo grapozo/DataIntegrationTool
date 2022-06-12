@@ -33,7 +33,7 @@ export const getUpdatedSelectedContactsLabel = (
 };
 
 /**
- * Generates a random list of contacts. The contacts id's and name's
+ * Generates a random list of contacts. The contacts id's
  * will be based on the Math.random function.
  * This is used for testing purposes only.
  * @param numberOfContacts number of contacts that will be generated
@@ -44,7 +44,7 @@ export const generateListOfContacts = (numberOfContacts: number): Contact[] => {
   for (let index = 0; index < numberOfContacts; index++) {
     contactList.push({
       id: Math.random().toString(36).substring(2, 20),
-      name: Math.random().toString(36).substring(2, 20)
+      name: `Contact ${index}`
     });
   }
   return contactList;

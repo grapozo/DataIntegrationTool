@@ -1,0 +1,64 @@
+.App {
+  position: relative;
+  display: grid;
+
+  // Aligns center
+  margin: 0 auto;
+  margin-top: 5rem;
+  // Defines a max size for the grid.
+  max-width: 50rem;
+  // We create a 13 fr grid, and then overlap the divs
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 2rem;
+  grid-gap: 5rem;
+
+  .cardContainer {
+    position: relative;
+    // Positions the cardContainer above the sync button container
+    z-index: 2;
+    // Positions the first div of the element in aligment with the button container
+    > div:first-of-type {
+      position: absolute;
+      top: 5rem;
+      left: -2rem;
+    }
+  }
+
+  // Overlap the divs
+  .gmailCard {
+    grid-column: 1 / 6;
+    grid-row: 1;
+  }
+  .syncContactsButton {
+    grid-column: 3 / 5;
+    grid-row: 1;
+  }
+  .mailchimpCard {
+    grid-column: 8 / 13;
+    grid-row: 1;
+  }
+
+  // Makes it responsive
+  @media (max-width: 970px) {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    top: unset;
+    margin: unset;
+    padding: 2rem;
+    // For small screens, sets a block layout.
+    display: block;
+
+    // Unset the absolute positions.
+    .cardContainer {
+      > div:first-of-type {
+        position: initial;
+      }
+    }
+
+    .gmailCard,
+    .syncContactsButton,
+    .mailchimpCard {
+      position: initial;
+    }
+  }
+}
