@@ -14,7 +14,7 @@ export const ContactDropdownListItem = ({
   contact,
   onContactSelectCallback
 }: ContactsDropdownListItemProps): JSX.Element => {
-  const [checkboxSelected, setCheckboxSelected] = useState(false);
+  const [checkboxSelected, setCheckboxSelected] = useState<boolean>(false);
 
   /**
    * Sets the selected state and notifies the parent component.
