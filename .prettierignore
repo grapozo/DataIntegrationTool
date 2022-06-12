@@ -1,0 +1,5 @@
+dist/
+public/
+package-lock.json
+.gitignore
+README.md

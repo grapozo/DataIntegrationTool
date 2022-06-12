@@ -1,0 +1,56 @@
+// NOTE: For convenience, we import the dropdown configuration variables here.
+// If this component is moved in the future, we'll need to redeclare these values.
+@use '../configuration/DropdownConfigurations' as *;
+
+.contactsDropdownPlaceholder {
+  cursor: pointer;
+  height: $initial-dropdown-height;
+  position: relative;
+
+  // General inner-component configurations.
+  // Declared first to allow overriding.
+  .numberOfSelectedContacts,
+  &:before,
+  &:after {
+    position: absolute;
+    // Centers the element
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before,
+  &:after {
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  .numberOfSelectedContacts {
+    color: #33475b;
+    left: 3rem;
+  }
+
+  // The checkmark indicating that this component is a dropdown.
+  &:before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.09521 9.99833L1.85228 6.75539C1.49092 6.39404 0.91646 6.39404 0.555105 6.75539C0.193749 7.11675 0.193749 7.69121 0.555105 8.05257L4.43736 11.9348C4.79871 12.2962 5.38244 12.2962 5.7438 11.9348L15.5653 2.12263C15.9266 1.76128 15.9266 1.18682 15.5653 0.82546C15.2039 0.464105 14.6294 0.464105 14.2681 0.82546L5.09521 9.99833Z' fill='%237C99B6'/%3E%3C/svg%3E%0A");
+    width: 1rem;
+    height: 0.81rem;
+    left: 1.25rem;
+  }
+
+  // Expand dropdown arrow
+  &:after {
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.04727 8.27516C7.65225 8.69622 6.98374 8.69622 6.58871 8.27516L0.98645 2.30384C0.387344 1.66527 0.84012 0.619635 1.71574 0.619635L12.9202 0.619634C13.7959 0.619634 14.2486 1.66527 13.6495 2.30384L8.04727 8.27516Z' fill='%237C99B6'/%3E%3C/svg%3E%0A"); // // Overrides this property, since we need to also rotate the arrow.
+    width: 0.87rem;
+    height: 0.5rem;
+    right: 1.25rem;
+    transition: transform 0.3s;
+  }
+
+  &.expanded {
+    &:after {
+      // When expanded, rotates the arrow
+      transform: rotate(-180deg) translateY(50%);
+    }
+  }
+}

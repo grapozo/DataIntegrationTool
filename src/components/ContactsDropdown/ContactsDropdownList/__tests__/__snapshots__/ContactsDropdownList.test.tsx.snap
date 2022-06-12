@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactDropdownListItem should correctly render 1`] = `
+<div
+  className="
+      undefined 
+      undefined"
+>
+  <div>
+    <div
+      className="undefined"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        Mock contact
+      </label>
+    </div>
+  </div>
+  <div>
+    <div
+      className="undefined"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        Mock contact 2
+      </label>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "target": "ESNext",
+    "sourceMap": true,
+    "strict": true,
+    "checkJs": false,
+    "paths": {
+      "shared/*": ["./src/shared/*"]
+    }
+  },
+  "include": ["./src", "./configuration/ts-definitions/definitions.d.ts"]
+}
