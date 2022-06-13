@@ -1,6 +1,6 @@
 import { create } from 'react-test-renderer';
 import { ContactsDropdownPlaceholder } from '../ContactsDropdownPlaceholder';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 const mockOnClick = jest.fn();
@@ -26,5 +26,11 @@ describe('ContactsDropdownPlaceholder', () => {
     render(<MockContactsDropdownPlaceholder />);
     const contactsLabel = await screen.findByText('No Contacts');
     expect(contactsLabel).toBeInTheDocument();
+  });
+  it('should call onClick when the element is clicked', async () => {
+    render(<MockContactsDropdownPlaceholder />);
+    const contactsLabel = await screen.findByText('No Contacts');
+    fireEvent.click(contactsLabel);
+    expect(mockOnClick).toHaveBeenCalled();
   });
 });

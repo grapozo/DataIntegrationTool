@@ -11,6 +11,8 @@ type ContactsDropdownProps = {
   serviceDescription: string;
   /** The contacts list. */
   contacts: Contact[];
+  /** Callback that runs when the selected contact list is changed */
+  selectedContactListChangedCallback: (serviceName: string, selectedContacts: Contact[]) => void;
 };
 
 /**
@@ -21,14 +23,20 @@ export const ContactSyncCard = ({
   ServiceIcon,
   serviceName,
   serviceDescription,
-  contacts
+  contacts,
+  selectedContactListChangedCallback
 }: ContactsDropdownProps): JSX.Element => {
   return (
     <div className={`${styles.contactSyncCard}`}>
       <ServiceIcon />
       <div className={`${styles.serviceName}`}>{serviceName}</div>
       <div className={`${styles.serviceDescription}`}>{serviceDescription}</div>
-      <ContactsDropdown contacts={contacts} />
+      <ContactsDropdown
+        selectedContactListChangedCallback={(contactList) => {
+          selectedContactListChangedCallback(serviceName, contactList);
+        }}
+        contacts={contacts}
+      />
     </div>
   );
 };

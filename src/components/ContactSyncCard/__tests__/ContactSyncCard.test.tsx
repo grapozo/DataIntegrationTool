@@ -8,11 +8,14 @@ const IconMock = () => <svg>This is a svg mock</svg>;
 const serviceName = 'Testing Card';
 const serviceDescription = 'Testing the Sync Card!';
 
+const selectedContactListChangedCallbackMock = jest.fn();
+
 const MockContactSyncCard = () => (
   <ContactSyncCard
     ServiceIcon={IconMock}
     serviceName={serviceName}
     serviceDescription={serviceDescription}
+    selectedContactListChangedCallback={selectedContactListChangedCallbackMock}
     contacts={[
       {
         id: 'ef1934cc85aec5ef909f74c7778529ea',
