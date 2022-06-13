@@ -8,9 +8,14 @@ import { getUpdatedSelectedContactsLabel } from './helpers';
 type ContactsDropdownProps = {
   /** The contacts list */
   contacts: Contact[];
+  /** Callback that runs when the selected contact list is changed */
+  selectedContactListChangedCallback: (selectedContacts: Contact[]) => void;
 };
 
-export const ContactsDropdown = ({ contacts }: ContactsDropdownProps): JSX.Element => {
+export const ContactsDropdown = ({
+  contacts,
+  selectedContactListChangedCallback
+}: ContactsDropdownProps): JSX.Element => {
   const [dropdownExpanded, setDropdownExpanded] = useState<boolean>(false);
   const [selectedContacts, setSelectedContacts] = useState<Contact[]>([]);
   // Since we start with no selected contacts, we default the label to 'No Contacts'.
@@ -29,6 +34,8 @@ export const ContactsDropdown = ({ contacts }: ContactsDropdownProps): JSX.Eleme
       selectedContacts.length
     );
     setSelectedContactsLabel(updatedContactsLabel);
+    // Notifies parent
+    selectedContactListChangedCallback(selectedContacts);
   }, [selectedContacts]);
 
   return (
