@@ -2,6 +2,7 @@ import { create } from 'react-test-renderer';
 import { ContactsDropdown } from '../ContactsDropdown';
 import '@testing-library/jest-dom';
 
+const selectedContactListChangedCallbackMock = jest.fn();
 /**
  * For now, we only keep the snapshot test, since we already have
  * the tests for the most specific functionality of the component
@@ -12,6 +13,7 @@ describe('ContactsDropdown', () => {
     // Since this is a snap test, we keep a static list.
     const tree = create(
       <ContactsDropdown
+        selectedContactListChangedCallback={selectedContactListChangedCallbackMock}
         contacts={[
           {
             id: 'ef1934cc85aec5ef909f74c7778529ea',
